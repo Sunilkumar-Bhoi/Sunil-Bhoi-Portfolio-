@@ -1,0 +1,489 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    transition: max-height 0.5s ease;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1c82ad; /* Cool accent color */
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0f7fa, #80deea); /* Cool gradient background */
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.cta-button {
+    padding: 10px 30px;
+    background-color: #1c82ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #15617a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f9fc;
+    color: #777;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav.active ul {
+        max-height: 500px; /* Opens the menu */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+    }
+}
+
+/* About Page Styles */
+.about {
+    padding: 40px 20px; /* Add padding for better spacing */
+    max-width: 800px; /* Set a maximum width for content */
+    margin: 0 auto; /* Center the content */
+    background-color: #ffffff; /* White background for the content area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about h2 {
+    font-size: 36px; /* Larger font size for headings */
+    color: #1c82ad; /* Cool accent color for headings */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+.about h3 {
+    font-size: 28px; /* Slightly smaller font for subheadings */
+    color: #333; /* Dark color for subheadings */
+    margin-top: 20px; /* Space above subheadings */
+    margin-bottom: 10px; /* Space below subheadings */
+}
+
+.about p {
+    font-size: 18px; /* Readable font size for paragraphs */
+    color: #555; /* Slightly lighter color for text */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.about ul {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px; /* Indent the list */
+    margin-bottom: 15px; /* Space below lists */
+}
+
+.about ul li {
+    font-size: 18px; /* Font size for list items */
+    color: #555; /* Consistent color for list items */
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f9fc; /* Light background for footer */
+    color: #777;
+    position: relative; /* Changed to relative for better placement */
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .about h2 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+    }
+
+    .about h3 {
+        font-size: 24px; /* Adjust subheading size for smaller screens */
+    }
+
+    .about p, .about ul li {
+        font-size: 16px; /* Adjust paragraph and list item size */
+    }
+}
+
+/* Projects Section */
+.projects {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 36px;
+    color: #1c82ad;
+    margin-bottom: 30px;
+}
+
+.project-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1c82ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #15617a;
+}
+
+/* Skills Section */
+.skills {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 36px;
+    color: #1c82ad;
+    margin-bottom: 30px;
+}
+
+.skills-category {
+    margin-bottom: 30px;
+}
+
+.skills-category h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skills-category ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.skills-category ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Soft hover effect on skill categories */
+.skills-category:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Experience Section */
+.experience {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 36px;
+    color: #1c82ad;
+    margin-bottom: 30px;
+}
+
+.experience-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-item h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Education Section */
+.education {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.education h2 {
+    font-size: 36px;
+    color: #1c82ad;
+    margin-bottom: 30px;
+}
+
+.education-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.education-item h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.education-item p, .education-item ul {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.education-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.education-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #1c82ad;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1c82ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #155d7f;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #1c82ad;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
