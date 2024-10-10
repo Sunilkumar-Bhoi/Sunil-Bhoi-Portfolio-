@@ -172,7 +172,7 @@ footer {
 .about {
     padding: 40px 20px; /* Add padding for better spacing */
     max-width: 800px; /* Set a maximum width for content */
-    margin: 20 auto; /* Center the content */
+    margin: 20px auto; /* Center the content */
     background-color: #ffffff; /* White background for the content area */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -223,7 +223,7 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .about {
-        margin : 20px;
+        margin: 20px;
         padding: 20px; /* Reduce padding on smaller screens */
     }
 
